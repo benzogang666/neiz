@@ -9,7 +9,7 @@ const Header = () => {
       <div className="header">
         <LuMenu className="header-icon" />
         <div className="named">ARAFAT</div>
-        <NavLink className="header-icon">
+        <NavLink className="header-icon" to="search">
           <LuSearch />
         </NavLink>
       </div>
