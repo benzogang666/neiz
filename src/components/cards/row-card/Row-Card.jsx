@@ -22,11 +22,12 @@ const Row_Card = ({ round }) => {
                 stopSpecific={stopSpecific}
               />
             )}
-            <img
+            {/* <img
               className="r-c-image"
               src={`/public/images/${line.image}`}
               onClick={() => startSpecific(line.id)}
-            />
+            /> */}
+            <div className="r-c-image"></div>
             <div className="r-c-data">
               <div className="r-c-named">{line.name}</div>
               <div className="r-c-details">{line.details}</div>
