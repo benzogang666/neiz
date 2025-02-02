@@ -1,0 +1,43 @@
+.side-bar {
+  width: 70%;
+  height: 100%;
+  padding: 10px;
+  background: #282828;
+  z-index: 666;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.side-bar-content {
+  height: 100%;
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: auto 1fr auto;
+  align-content: space-between;
+}
+
+.se-br-logo {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.se-br-list {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: row;
+  align-content: start;
+  overflow-x: scroll;
+}
+
+.se-br-navigate {
+  color: #fff;
+  padding: 15px;
+  background: #5a5a5a;
+  border-radius: 15px;
+}
+
+.se-br-close {
+  text-align: center;
+}

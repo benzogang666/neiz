@@ -1,13 +1,16 @@
-import { NavLink } from "react-router";
 import "./Header.css";
 
-import { LuMenu, LuSearch } from "react-icons/lu";
+import { NavLink } from "react-router";
+
+import Sidebar from "../sidebar/Sidebar"
+
+import { LuSearch } from "react-icons/lu";
 
 const Header = () => {
   return (
     <>
       <div className="header">
-        <LuMenu className="header-icon" />
+        <Sidebar />
         <div className="named">ARAFAT</div>
         <NavLink className="header-icon" to="search">
           <LuSearch />

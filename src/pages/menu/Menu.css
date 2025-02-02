@@ -27,7 +27,7 @@
   background: #fff;
   scrollbar-width: none;
   position: sticky;
-  top: 0.5px;
+  top: -0.5px;
 }
 
 .sub-category {

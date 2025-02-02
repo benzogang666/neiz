@@ -1,0 +1,37 @@
+.line-cards {
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: row;
+}
+
+.line-card {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: 90px auto;
+  grid-auto-rows: 90px;
+  grid-auto-flow: column;
+  background: #e0e0e0;
+  border-radius: 15px;
+}
+
+.l-c-image {
+  background: #3b3f90;
+  border-radius: 15px;
+}
+
+.l-c-data {
+  display: grid;
+  align-content: space-between;
+}
+
+.l-c-expenses {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.l-c-counter {
+  display: grid;
+  grid-auto-flow: column;
+}

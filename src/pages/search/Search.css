@@ -4,11 +4,25 @@
   grid-auto-rows: 50px 1fr;
 }
 
+.search-dashboard {
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: 50px auto;
+  grid-auto-flow: column;
+}
+
+.navigate {
+  font-size: 30px;
+  display: grid;
+  place-content: center;
+  background: #e0e0e0;
+  border-radius: 15px;
+}
+
 .search-field {
   font-size: 17px;
-  padding: 0 15px;
-  display: grid;
-  background: #e3e3e3;
+  padding: 0 20px;
+  background: #e0e0e0;
   border: none;
   border-radius: 15px;
   outline: none;

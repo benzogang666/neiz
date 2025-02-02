@@ -1,7 +1,12 @@
 import "./Search.css";
+
 import { useState } from "react";
+
 import menu from "../../assets/menu";
+
 import RC from "../../components/cards/row-card/Row-Card";
+
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -10,35 +15,39 @@ const Search = () => {
   const handleSearch = (e) => {
     const searchQuery = e.target.value.toLowerCase();
     setQuery(searchQuery);
-    if (!searchQuery) return setResults([]);
-
     setResults(
-      menu.categories.flatMap((category) =>
-        category.subcategories.flatMap((subcategory) =>
-          subcategory.items.filter((item) =>
-            [item.name, item.details, item.ingredients.join(",")].some(
-              (field) => field.toLowerCase().includes(searchQuery)
+      searchQuery
+        ? menu.categories.flatMap((c) =>
+            c.subcategories.flatMap((s) =>
+              s.items.filter((i) =>
+                [i.name, i.details, i.ingredients.join(",")].some((f) =>
+                  f.toLowerCase().includes(searchQuery)
+                )
+              )
             )
           )
-        )
-      )
+        : []
     );
   };
 
   return (
     <div className="search">
-      <input
-        className="search-field"
-        type="text"
-        value={query}
-        onChange={handleSearch}
-        placeholder="Введите название блюда..."
-      />
-      {query && results.length > 0 && (
-        <div className="search-reservoir">
-          <RC round={results} />
+      <div className="search-dashboard">
+        <div className="navigate">
+          <IoMdArrowRoundBack className="navigate"/>
         </div>
-      )}
+        <input
+          className="search-field"
+          type="text"
+          value={query}
+          onChange={handleSearch}
+          placeholder="Введите название блюда..."
+        />
+      </div>
+
+      <div className="search-reservoir">
+        {query && results.length > 0 && <RC round={results} />}
+      </div>
     </div>
   );
 };
