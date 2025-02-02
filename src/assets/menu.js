@@ -67,7 +67,7 @@ const menu = {
               name: "Classic Burger",
               details: "Сочный бургер с говядиной.",
               price: 1000,
-              image: "/images/burgers/classic-burger.png",
+              image: "classic_burger.png",
               cookingTime: 10,
               ingredients: ["Булочка", "Говядина", "Сыр", "Салат"],
             },
