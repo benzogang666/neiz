@@ -12,11 +12,14 @@
   justify-items: center;
   background: #e1e1e1;
   border-radius: 15px;
-
 }
 
 .r-c-image {
-  height: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 160px;
+  max-height: 160px;
+  object-fit: cover;
   border-radius: 15px;
 }
 
