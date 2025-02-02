@@ -1,0 +1,39 @@
+.col-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.col-card {
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: 140px auto;
+  grid-auto-rows: 140px;
+  grid-auto-flow: column;
+  border-radius: 15px;
+}
+
+.c-c-image {
+  background: #5055a8;
+  border-radius: 15px;
+}
+
+.c-c-data {
+  display: grid;
+  align-content: space-between;
+  justify-items: start;
+}
+
+.c-c-details {
+  font-size: 13.5px;
+  line-height: 1.5;
+  max-height: calc(1.5em * 3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c-c-price {
+  color: #fff;
+  padding: 5px 20px;
+  background: #000;
+  border-radius: 100px;
+}

@@ -1,0 +1,15 @@
+.search {
+  display: grid;
+  gap: 10px;
+  grid-auto-rows: 50px 1fr;
+}
+
+.search-field {
+  font-size: 17px;
+  padding: 0 15px;
+  display: grid;
+  background: #e3e3e3;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}

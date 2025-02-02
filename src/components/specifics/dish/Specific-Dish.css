@@ -1,0 +1,67 @@
+.specific_dish {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #fff;
+  z-index: 1000;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.specific-card {
+  min-height: 100%;
+  display: grid;
+  gap: 10px;
+  grid-auto-rows: 50% 1fr auto;
+  align-content: space-between;
+  position: relative;
+}
+
+.specific-dish-close {
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  background: #0000006e;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sc-c-image {
+  height: 100%;
+  display: grid;
+  place-self: center;
+  border-radius: 15px;
+}
+
+.sc-c-data {
+  display: grid;
+  gap: 10px;
+  grid-auto-rows: auto auto 1fr;
+  overflow-y: scroll;
+}
+
+.sc-c-named {
+  font-size: 22px;
+}
+
+.sc-c-counter {
+  color: #fff;
+  padding: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  background: #282828;
+  border-radius: 100px;
+}
+
+.sc-c-quantity {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
