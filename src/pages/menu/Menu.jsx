@@ -15,7 +15,7 @@ const Menu = () => {
     activeCategory.subcategories[0]
   );
 
-  const [view, setView] = useState("row");
+  const [view, setView] = useState("col");
 
   return (
     <>

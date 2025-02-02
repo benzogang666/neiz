@@ -16,22 +16,46 @@
 }
 
 .l-c-image {
-  background: #3b3f90;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: contain;
   border-radius: 15px;
 }
 
 .l-c-data {
   display: grid;
   align-content: space-between;
+  position: relative;
+}
+
+.l-c-remove {
+  color: #303030;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .l-c-expenses {
   display: grid;
   grid-auto-flow: column;
+  align-items: center;
   justify-content: space-between;
 }
 
 .l-c-counter {
   display: grid;
+  grid-auto-columns: 25px;
   grid-auto-flow: column;
+  place-items: center;
+}
+
+.l-c-quantity {
+  color: #303030;
+}
+
+.l-c-counter-button {
+  color: #303030;
+  font-size: 25px;
 }

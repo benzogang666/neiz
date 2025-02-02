@@ -56,11 +56,11 @@ export const CartProvider = ({ children }) => {
       value={{
         cart,
         addToCart,
-        decreaseQuantity,
-        removeFromCart,
-        getTotalPrice,
-        getProductQuantity,
         clearCart,
+        decreaseQuantity,
+        getProductQuantity,
+        getTotalPrice,
+        removeFromCart,
       }}
     >
       {children}
