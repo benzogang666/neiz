@@ -7,11 +7,11 @@ import Search from "./pages/search/Search";
 
 const router = createBrowserRouter([
   {
-    path: "nope",
+    path: "/",
     element: <Layout />,
     children: [
       {
-        path: "",
+        path: "/",
         element: <Menu />,
       },
       {

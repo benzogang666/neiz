@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import "./Header.css";
 
 import { LuMenu, LuSearch } from "react-icons/lu";
@@ -8,7 +9,9 @@ const Header = () => {
       <div className="header">
         <LuMenu className="header-icon" />
         <div className="named">ARAFAT</div>
-        <LuSearch className="header-icon" />
+        <NavLink className="header-icon">
+          <LuSearch />
+        </NavLink>
       </div>
     </>
   );
