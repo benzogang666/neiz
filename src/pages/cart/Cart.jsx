@@ -4,6 +4,8 @@ import { IoReceipt, IoTrash } from "react-icons/io5";
 
 import { useCart } from "../../contexts/cartContext/CartContext";
 
+import { NavLink } from "react-router";
+
 import LC from "../../components/cards/line-card/Line-Card";
 
 const Cart = () => {
@@ -12,7 +14,9 @@ const Cart = () => {
     <>
       <div className="cart">
         <div className="cart-dashboard">
-          <IoReceipt className="cart-device" />
+          <NavLink className="cart-device" to="/check">
+            <IoReceipt />
+          </NavLink>
           <div className="cart-total-price">
             {Intl.NumberFormat("ru-Ru").format(getTotalPrice()) + " ₸"}
           </div>

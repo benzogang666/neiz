@@ -13,14 +13,20 @@ const Line_Card = ({ round }) => {
       <div className="line-cards">
         {round.map((line) => (
           <div className="line-card" key={line.id}>
-            <img className="l-c-image" src={`/images/${line.image}`} />
+            <img
+              className="l-c-image"
+              src={`/images/${line.image}`}
+              alt={line.id}
+            />
             <div className="l-c-data">
               <IoClose
                 className="l-c-remove"
                 onClick={() => removeFromCart(line.id)}
               />
               <div className="l-c-named">{line.name}</div>
-              <div className="l-c-price">{line.price}</div>
+              <div className="l-c-price">{`${Intl.NumberFormat("ru-Ru").format(
+                line.price
+              )} ₸`}</div>
               <div className="l-c-expenses">
                 <div className="l-c-counter">
                   <IoRemoveCircle
@@ -36,7 +42,9 @@ const Line_Card = ({ round }) => {
                   />
                 </div>
                 <div className="l-c-all-price">
-                  {line.price * getProductQuantity(line.id)}
+                  {`${Intl.NumberFormat("ru-Ru").format(
+                    line.price * getProductQuantity(line.id)
+                  )} ₸`}
                 </div>
               </div>
             </div>

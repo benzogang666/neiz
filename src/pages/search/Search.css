@@ -12,6 +12,7 @@
 }
 
 .navigate {
+  color: #303030;
   font-size: 30px;
   display: grid;
   place-content: center;

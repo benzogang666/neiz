@@ -1,0 +1,36 @@
+.vacancies {
+  display: grid;
+  gap: 10px;
+}
+
+.vacancies-info {
+  padding: 10px;
+  border: 1px solid #303030;
+  border-radius: 15px;
+}
+
+.vacancies-cards {
+  display: grid;
+  gap: 10px;
+}
+
+.vacancy-card {
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: 5px auto;
+  grid-auto-rows: 100px;
+  grid-auto-flow: column;
+  border: 1px solid #303030;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.v-c-status {
+  background: #ff0000;
+}
+
+.v-c-data {
+  padding: 10px 0;
+  display: grid;
+  align-content: space-between;
+}

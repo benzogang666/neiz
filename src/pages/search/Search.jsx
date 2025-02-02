@@ -1,8 +1,10 @@
 import "./Search.css";
 
+import menu from "../../assets/menu";
+
 import { useState } from "react";
 
-import menu from "../../assets/menu";
+import { NavLink } from "react-router";
 
 import RC from "../../components/cards/row-card/Row-Card";
 
@@ -33,9 +35,9 @@ const Search = () => {
   return (
     <div className="search">
       <div className="search-dashboard">
-        <div className="navigate">
-          <IoMdArrowRoundBack className="navigate"/>
-        </div>
+        <NavLink className="navigate" to="/menu">
+          <IoMdArrowRoundBack className="navigate" />
+        </NavLink>
         <input
           className="search-field"
           type="text"

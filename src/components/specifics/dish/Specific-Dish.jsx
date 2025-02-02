@@ -13,10 +13,14 @@ const Specific_Dish = ({ line, isSpecific, stopSpecific }) => {
     <>
       <div className="specific_dish">
         <div className="specific-card">
-          <div className="specific-dish-close" onClick={stopSpecific}>
+          <div className="sc-c-close" onClick={stopSpecific}>
             <IoClose />
           </div>
-          <img className="sc-c-image" />
+          <img
+            className="sc-c-image"
+            src={`/images/${line.image}`}
+            alt={line.id}
+          />
           <div className="sc-c-data">
             <div className="sc-c-named">{line.name}</div>
             <div className="sc-c-wait">
