@@ -1,7 +1,7 @@
 import "./Search.css";
 import { useState } from "react";
-import menu from "../../assets/menu"
-import SRC from "../../components/cards/col-card/Col-Card";
+import menu from "../../assets/menu";
+import RC from "../../components/cards/row-card/Row-Card";
 
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -36,7 +36,7 @@ const Search = () => {
       />
       {query && results.length > 0 && (
         <div className="search-reservoir">
-          <SRC round={results} />
+          <RC round={results} />
         </div>
       )}
     </div>
