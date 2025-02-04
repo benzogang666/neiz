@@ -18,18 +18,10 @@ const Side = () => {
           <div className="side-bar-content">
             <img className="se-br-logo" src="/images/logo.png" alt="logo" />
             <div className="se-br-list">
-              <NavLink
-                className="se-br-navigate"
-                onClick={closeSide}
-                to="menu"
-              >
+              <NavLink className="se-br-navigate" onClick={closeSide} to="menu">
                 Меню
               </NavLink>
-              <NavLink
-                className="se-br-navigate"
-                onClick={closeSide}
-                to="cart"
-              >
+              <NavLink className="se-br-navigate" onClick={closeSide} to="cart">
                 Корзина
               </NavLink>
               <NavLink

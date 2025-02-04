@@ -38,6 +38,10 @@
   border-radius: 15px;
 }
 
+.active-se-br-navigate {
+  color: #ff0000;
+}
+
 .se-br-close {
   text-align: center;
 }
