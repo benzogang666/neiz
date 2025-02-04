@@ -1,8 +1,10 @@
 import "./Menu.css";
 
-import menu from "../../assets/menu";
+import { useCart } from "../../contexts/cartContext/CartContext";
+import { useMenu } from "../../contexts/menuContext/MenuContext";
 
 import { useState } from "react";
+import { NavLink } from "react-router";
 
 import { LuLayoutGrid, LuLayoutList } from "react-icons/lu";
 
@@ -10,12 +12,15 @@ import CC from "../../components/cards/col-card/Col-Card";
 import RC from "../../components/cards/row-card/Row-Card";
 
 const Menu = () => {
-  const [activeCategory, setActiveCategory] = useState(menu.categories[0]);
-  const [activeSubcategory, setActiveSubcategory] = useState(
-    activeCategory.subcategories[0]
+  const { getTotalPrice } = useCart();
+  const menu = useMenu();
+
+  const [isCategory, setIsCategory] = useState(menu.categories[0]);
+  const [isSubCategory, setIsSubCategory] = useState(
+    isCategory.subcategories[0]
   );
 
-  const [view, setView] = useState("col");
+  const [view, setView] = useState("row");
 
   return (
     <>
@@ -25,8 +30,8 @@ const Menu = () => {
             <div
               key={line.slug}
               onClick={() => {
-                setActiveCategory(line);
-                setActiveSubcategory(line.subcategories[0]);
+                setIsCategory(line);
+                setIsSubCategory(line.subcategories[0]);
               }}
               className="category"
             >
@@ -36,14 +41,12 @@ const Menu = () => {
         </div>
 
         <div className="sub-categories">
-          {activeCategory.subcategories.map((line) => (
+          {isCategory.subcategories.map((line) => (
             <div
               className={`sub-category ${
-                activeSubcategory.slug === line.slug
-                  ? "active-sub-category"
-                  : ""
+                isSubCategory.slug === line.slug ? "active-sub-category" : ""
               }`}
-              onClick={() => setActiveSubcategory(line)}
+              onClick={() => setIsSubCategory(line)}
               key={line.slug}
             >
               {line.name}
@@ -59,12 +62,18 @@ const Menu = () => {
 
           <div className="reservoir-cards">
             {view === "col" ? (
-              <CC round={activeSubcategory.items} />
+              <CC round={isSubCategory.items} />
             ) : (
-              <RC round={activeSubcategory.items} />
+              <RC round={isSubCategory.items} />
             )}
           </div>
         </div>
+
+        {getTotalPrice() > 0 && (
+          <NavLink className="navigate-cart" to="/cart">
+            {`${Intl.NumberFormat("ru-RU").format(getTotalPrice())} ₸`}
+          </NavLink>
+        )}
       </div>
     </>
   );

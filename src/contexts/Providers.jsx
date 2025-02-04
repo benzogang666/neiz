@@ -1,4 +1,5 @@
 import { CartProvider } from "./cartContext/CartContext";
+import { MenuProvider } from "./menuContext/MenuContext";
 
 const BuildProviderTree = (providers) =>
   providers.reduceRight(
@@ -12,6 +13,6 @@ const BuildProviderTree = (providers) =>
     ({ children }) => <>{children}</>
   );
 
-const Providers = BuildProviderTree([CartProvider]);
+const Providers = BuildProviderTree([CartProvider, MenuProvider]);
 
 export default Providers;

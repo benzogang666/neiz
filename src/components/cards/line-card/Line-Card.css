@@ -48,6 +48,7 @@
   display: grid;
   grid-auto-columns: 25px;
   grid-auto-flow: column;
+  place-items: center;
 }
 
 .l-c-quantity {

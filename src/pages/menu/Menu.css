@@ -57,3 +57,13 @@
   grid-auto-flow: column;
   justify-content: space-between;
 }
+
+.navigate-cart {
+  color: #fff;
+  padding: 10px 20px;
+  background: #303030;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}

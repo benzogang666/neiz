@@ -1,22 +1,25 @@
 import "./Cart.css";
 
-import { IoReceipt, IoTrash } from "react-icons/io5";
+import { IoReader, IoTrash } from "react-icons/io5";
 
 import { useCart } from "../../contexts/cartContext/CartContext";
 
-import { NavLink } from "react-router";
+import { useNavigate } from "react-router";
 
 import LC from "../../components/cards/line-card/Line-Card";
 
 const Cart = () => {
   const { cart, getTotalPrice, clearCart } = useCart();
+
+  const navigate = useNavigate();
   return (
     <>
       <div className="cart">
         <div className="cart-dashboard">
-          <NavLink className="cart-device" to="/check">
-            <IoReceipt />
-          </NavLink>
+          <IoReader
+            className="cart-device"
+            onClick={() => navigate("/check")}
+          />
           <div className="cart-total-price">
             {Intl.NumberFormat("ru-Ru").format(getTotalPrice()) + " ₸"}
           </div>
