@@ -2,6 +2,7 @@ import "./Specific-Dish.css";
 
 import { useCart } from "../../../contexts/cartContext/CartContext";
 
+import { LuMinus, LuPlus } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 
 const Specific_Dish = ({ line, isSpecific, stopSpecific }) => {
@@ -11,34 +12,42 @@ const Specific_Dish = ({ line, isSpecific, stopSpecific }) => {
 
   return (
     <>
-      <div className="specific_dish">
-        <div className="specific-card">
-          <div className="sc-c-close" onClick={stopSpecific}>
-            <IoClose />
-          </div>
-          <img
-            className="sc-c-image"
-            src={`/images/${line.image}`}
-            alt={line.id}
-          />
-          <div className="sc-c-data">
-            <div className="sc-c-named">{line.name}</div>
-            <div className="sc-c-wait">
-              Время приготовления: {line.cookingTime} мин
+      <div className="specific">
+        <div className="specific-close" onClick={stopSpecific}>
+          <IoClose />
+        </div>
+        <div className="specific-dish">
+          <img className="sc-dh-image" src="/images/bbq.png" />
+          <div className="sc-dh-data">
+            <div className="sc-dh-named">Renamed</div>
+            <div className="sc-dh-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              expedita dolorem ex! Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. In error vel at quo natus minima inventore
+              laborum, quos nostrum cumque alias consequuntur assumenda, eum
+              quidem ex excepturi aspernatur eligendi vitae omnis non. Odio
+              suscipit repellat aliquam eaque dicta ullam officiis reprehenderit
+              hic minima. Modi nulla quas laboriosam officiis amet, laborum
+              mollitia, delectus molestiae quae error inventore animi quo
+              blanditiis sed vero assumenda et? Minima repellendus quos
+              perferendis fuga voluptatem velit!
             </div>
-            <div className="sc-c-details">{line.details}</div>
           </div>
-          <div className="sc-c-counter">
+          <div className="sc-dh-counter">
             {getProductQuantity(line.id) > 0 ? (
               <>
-                <div onClick={() => decreaseQuantity(line.id)}>-</div>
-                <div className="sc-c-quantity">
-                  {getProductQuantity(line.id)}
-                </div>
-                <div onClick={() => addToCart(line)}>+</div>
+                <LuMinus
+                  className="sc-dh-counter-button"
+                  onClick={() => decreaseQuantity(line.id)}
+                />
+                <div>{getProductQuantity(line.id)}</div>
+                <LuPlus
+                  className="sc-dh-counter-button"
+                  onClick={() => addToCart(line)}
+                />
               </>
             ) : (
-              <div className="sc-c-quantity" onClick={() => addToCart(line)}>
+              <div onClick={() => addToCart(line)}>
                 {`${Intl.NumberFormat("ru-Ru").format(line.price)} ₸`}
               </div>
             )}
