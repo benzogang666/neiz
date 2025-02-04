@@ -17,21 +17,10 @@ const Specific_Dish = ({ line, isSpecific, stopSpecific }) => {
           <IoClose />
         </div>
         <div className="specific-dish">
-          <img className="sc-dh-image" src="/images/bbq.png" />
+          <img className="sc-dh-image" src={`/images/${line.image}`} />
           <div className="sc-dh-data">
-            <div className="sc-dh-named">Renamed</div>
-            <div className="sc-dh-details">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              expedita dolorem ex! Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. In error vel at quo natus minima inventore
-              laborum, quos nostrum cumque alias consequuntur assumenda, eum
-              quidem ex excepturi aspernatur eligendi vitae omnis non. Odio
-              suscipit repellat aliquam eaque dicta ullam officiis reprehenderit
-              hic minima. Modi nulla quas laboriosam officiis amet, laborum
-              mollitia, delectus molestiae quae error inventore animi quo
-              blanditiis sed vero assumenda et? Minima repellendus quos
-              perferendis fuga voluptatem velit!
-            </div>
+            <div className="sc-dh-named">{line.name}</div>
+            <div className="sc-dh-details">{line.details}</div>
           </div>
           <div className="sc-dh-counter">
             {getProductQuantity(line.id) > 0 ? (
