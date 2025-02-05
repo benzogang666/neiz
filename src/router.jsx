@@ -2,9 +2,11 @@ import { createBrowserRouter } from "react-router";
 
 import Layout from "./layout/Layout";
 
-import Menu from "./pages/menu/Menu";
+import Reviews from "./pages/reviews/Reviews";
 import Cart from "./pages/cart/Cart";
 import Check from "./pages/check/Check";
+import Contacts from "./pages/contacts/Contacts";
+import Menu from "./pages/menu/Menu";
 import Search from "./pages/search/Search";
 import Vacancies from "./pages/vacancies/Vacancies";
 
@@ -18,8 +20,8 @@ const router = createBrowserRouter([
         element: <Menu />,
       },
       {
-        path: "menu",
-        element: <Menu />,
+        path: "reviews",
+        element: <Reviews />,
       },
       {
         path: "cart",
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "check",
         element: <Check />,
+      },
+      {
+        path: "contacts",
+        element: <Contacts />,
+      },
+      {
+        path: "menu",
+        element: <Menu />,
       },
       {
         path: "search",

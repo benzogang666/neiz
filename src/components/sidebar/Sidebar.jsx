@@ -14,8 +14,11 @@ const Side = () => {
       <LuMenu className="header-icon" onClick={openSide} />
 
       {isOpenSide && (
-        <div className="side-bar">
-          <div className="side-bar-content">
+        <div className="side-bar" onClick={closeSide}>
+          <div
+            className="side-bar-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img className="se-br-logo" src="/images/logo.png" alt="logo" />
             <div className="se-br-list">
               <NavLink className="se-br-navigate" onClick={closeSide} to="menu">
