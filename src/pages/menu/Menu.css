@@ -25,6 +25,7 @@
   grid-auto-flow: column;
   place-content: start;
   background: #fff;
+  overflow-x: scroll;
   scrollbar-width: none;
   position: sticky;
   top: -0.5px;
@@ -34,6 +35,7 @@
   padding: 5px 20px;
   border: 1px solid #000;
   border-radius: 100px;
+  white-space: nowrap;
 }
 
 .active-sub-category {

@@ -16,7 +16,7 @@ const Line_Card = ({ round }) => {
             <img
               className="l-c-image"
               src={`/images/${line.image}`}
-              alt={line.id}
+              alt=""
             />
             <div className="l-c-data">
               <IoClose

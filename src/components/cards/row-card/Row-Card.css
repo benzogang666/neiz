@@ -19,12 +19,20 @@
   margin: 0 auto;
   object-fit: contain;
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .r-c-data {
   display: grid;
   gap: 10px;
   align-content: space-between;
+}
+
+.r-c-named {
+  line-height: 1.5;
+  max-height: calc(1.5em * 1);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .r-c-details {

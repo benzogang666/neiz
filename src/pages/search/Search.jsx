@@ -22,7 +22,7 @@ const Search = () => {
         ? menu.categories.flatMap((c) =>
             c.subcategories.flatMap((s) =>
               s.items.filter((i) =>
-                [i.name, i.details, i.ingredients.join(",")].some((f) =>
+                [i.name, i.details].some((f) =>
                   f.toLowerCase().includes(searchQuery)
                 )
               )
@@ -44,6 +44,7 @@ const Search = () => {
           value={query}
           onChange={handleSearch}
           placeholder="Введите название блюда..."
+          autoFocus
         />
       </div>
 

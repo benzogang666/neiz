@@ -32,7 +32,7 @@ const Col_Card = ({ round }) => {
               className="c-c-image"
               src={`/images/${line.image}`}
               onClick={() => startSpecific(line.id)}
-              alt={line.id}
+              alt=""
             />
             <div className="c-c-data">
               <div className="c-c-named">{line.name}</div>

@@ -1,0 +1,34 @@
+.contacts {
+  display: grid;
+  gap: 10px;
+}
+
+.contact {
+  padding: 10px 30px;
+  display: grid;
+  gap: 10px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact::before {
+  content: "";
+  width: 5%;
+  height: 100%;
+  background: #5f6dff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact::after {
+  content: "";
+  width: 5%;
+  height: 100%;
+  background: #5f6dff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
