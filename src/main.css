@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scrollbar-width: none;
+}
+
 body {
   font-family: Arial, sans-serif;
 }

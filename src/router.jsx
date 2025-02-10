@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router";
 
 import Layout from "./layout/Layout";
 
-import Reviews from "./pages/reviews/Reviews";
 import Cart from "./pages/cart/Cart";
 import Check from "./pages/check/Check";
 import Contacts from "./pages/contacts/Contacts";
@@ -18,10 +17,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Menu />,
-      },
-      {
-        path: "reviews",
-        element: <Reviews />,
       },
       {
         path: "cart",

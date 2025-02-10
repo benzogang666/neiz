@@ -2,7 +2,7 @@ import "./Header.css";
 
 import { useNavigate } from "react-router";
 
-import Sidebar from "../sidebar/Sidebar";
+import Side from "../side/Side";
 
 import { LuSearch } from "react-icons/lu";
 
@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <Sidebar />
+        <Side />
         <div className="named">ARAFAT</div>
         <LuSearch className="header-icon" onClick={() => navigate("/search")} />
       </div>

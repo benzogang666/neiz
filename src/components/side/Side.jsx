@@ -1,4 +1,4 @@
-import "./Sidebar.css";
+import "./Side.css";
 
 import { useState } from "react";
 import { NavLink } from "react-router";
@@ -26,13 +26,6 @@ const Side = () => {
               </NavLink>
               <NavLink className="se-br-navigate" onClick={closeSide} to="cart">
                 Корзина
-              </NavLink>
-              <NavLink
-                className="se-br-navigate"
-                onClick={closeSide}
-                to="reviews"
-              >
-                Отзывы
               </NavLink>
               <NavLink
                 className="se-br-navigate"
