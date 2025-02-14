@@ -4,31 +4,21 @@
 }
 
 .contact {
-  padding: 10px 30px;
   display: grid;
   gap: 10px;
+  grid-auto-columns: 10px auto;
+  grid-auto-flow: column;
   border: 1px solid #000;
   border-radius: 15px;
   overflow: hidden;
-  position: relative;
 }
 
-.contact::before {
-  content: "";
-  width: 2%;
-  height: 100%;
-  background: #5f6dff;
-  position: absolute;
-  top: 0;
-  left: 0;
+.contact-status {
+  background: #3971ff;
 }
 
-.contact::after {
-  content: "";
-  width: 2%;
-  height: 100%;
-  background: #5f6dff;
-  position: absolute;
-  top: 0;
-  right: 0;
+.contact-data {
+  padding: 10px 0;
+  display: grid;
+  gap: 10px;
 }
