@@ -934,7 +934,7 @@ const menu = {
             },
             {
               id: "order_meter_shashlik_1",
-              name: "Метровый Шашлык 1",
+              name: "Метровый Шашлык № 1",
               image: "order_meter_shashlik_1.png",
               price: 100,
               cookingTime: 15,
@@ -942,7 +942,7 @@ const menu = {
             },
             {
               id: "order_meter_shashlik_2",
-              name: "Метровый Шашлык 2",
+              name: "Метровый Шашлык № 2",
               image: "order_meter_shashlik_2.png",
               price: 100,
               cookingTime: 15,
