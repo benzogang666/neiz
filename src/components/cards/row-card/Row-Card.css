@@ -30,7 +30,7 @@
 
 .r-c-named {
   line-height: 1.5;
-  max-height: calc(1.5em * 2);
+  max-height: calc(1.5em * 1);
   overflow: hidden;
   text-overflow: ellipsis;
 }

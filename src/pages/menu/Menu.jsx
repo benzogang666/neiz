@@ -35,7 +35,12 @@ const Menu = () => {
               }}
               className="category"
             >
-              {line.name}
+              <img
+                src={`/images/${line.slug}.png`}
+                alt=""
+                className="category-image"
+              />
+              <div className="category-named">{line.name}</div>
             </div>
           ))}
         </div>
